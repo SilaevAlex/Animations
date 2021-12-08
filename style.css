@@ -1,0 +1,62 @@
+body,
+html {
+    font-family: arial, sans-serif;
+    min-width: 100vh;
+    background-image: url(img/stars.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+div {
+    height: 600px;
+}
+
+
+.earth {
+    position: relative;
+    top: 220px;
+    left: 550px;
+    width: 300px;
+    animation-name: rotation;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+
+.moon {
+    position: absolute;
+    top: 60px;
+    left: 700px;
+    width: 150px;
+    animation-name: moon;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moon {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 0px 300px;
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: 0px 300px;
+    }
+}
